@@ -1,2 +1,2 @@
 # web-scrapers
-Samples for web scraping utilizing Python's web scraping arsenal
+Practice projects for web scraping utilizing Python's web scraping arsenal
