@@ -20,7 +20,7 @@ class SearchItem(Item):
 
 
 class ItemSpider(CrawlSpider):
-    base_url = "https://shopee.ph"
+    base_url = "https://shopee.ph/"
 
     name = 'shopee_spider'
     allowed_domain = ['shopee.ph']
@@ -66,7 +66,7 @@ class ItemSpider(CrawlSpider):
         """Generates the Request object for this spider to crawl.
         Note that this is a SeleniumRequest (the Request subclass when utilizing scrapy-selenium).
         """
-        yield SeleniumRequest(url=f'https://shopee.ph/search?keyword={self.item}', callback=self.parse)
+        yield SeleniumRequest(url=f'{self.base_url}search?keyword={self.item}', callback=self.parse)
 
     def parse(self, response):
         """Parses the response using BeautifulSoup.
